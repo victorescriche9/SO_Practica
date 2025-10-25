@@ -1,0 +1,22 @@
+//Asi tiene que quedar la salida exacta por el terminal cuando se hace $ LIST PRODUCTS
+
+$ LIST PRODUCTS
+--- Trade Ledger ---
+Item                    | Value (Gold) | Weight (Stone)
+--------------------------------------------------------
+Antlered Helm           | 250          | 4.5
+Warhammer of Bronze     | 400          | 8.0
+Stormlands Ale Barrel   | 80           | 10.0
+Ship Timber Plank       | 60           | 15.0
+Salted Fish Barrel      | 55           | 20.0
+Wine Cask               | 120          | 5.0
+Leather Riding Boots    | 90           | 2.0
+Bronze Helm             | 140          | 3.5
+Woolen Blanket          | 30           | 2.5
+Iron Dagger             | 35           | 1.2
+Grain Sack              | 40           | 10.0
+--------------------------------------------------------
+
+Total Entries: 11
+
+//Obviamente dependiendo de los datos que haya leido en el fichero binario correspondiente, no literlamente estos valores, pero si este formato
