@@ -1,0 +1,73 @@
+//Ejemplo de ejecución mas o menos completo de esta primera fase
+
+$montserrat:> Maester config.dat stock.db
+
+Maester of Dragonstone initialized. The board is set.
+$ PLEDGE TheVale sigil.jpg
+Pledge sent to TheVale. Envoy 1 is on its way.
+$ PLEDGE STATUS
+- TheVale: PENDING
+- KingsLanding: PENDING
+- Driftmark: PENDING
+$ ENVOY STATUS
+- Envoy 1: ON_MISSION (PLEDGE to TheVale)
+- Envoy 2: FREE
+- Envoy 3: FREE
+$ LIST PRODUCTS KingsLanding
+ERROR: You must have an alliance with KingsLanding to trade.
+$ PLEDGE KingsLanding sigil.jpg
+Pledge sent to KingsLanding. Envoy 2 is on its way.
+$ something else
+Unknown command
+$ ENVOY STATUS
+- Envoy 1: ON_MISSION (PLEDGE to TheVale)
+- Envoy 2: ON_MISSION (PLEDGE to KingsLanding)
+- Envoy 3: FREE
+$
+>>> Alliance with The Vale forged successfully!
+$ PLEDGE STATUS
+- TheVale: ALLIED
+- KingsLanding: ON_PENDING
+- Driftmark: PENDING
+$ LIST PRODUCTS TheVale
+Listing products from TheVale:
+1. Myrish Lace (150 units)
+2. Sweetwine (80 units)
+$ START TRADE TheVale
+Entering trade mode with TheVale.
+Available products: Myrish Lace, Sweetwine.
+(trade)> add Myrish Lace 10
+(trade)> add Sweetwine 5
+(trade)> send
+Trade list sent to TheVale.
+Trade list sent to TheVale.
+$ PLEDGE Driftmark sigil.jpg
+Pledge sent to Driftmark. An envoy is on its way.
+$
+>>> Pledge to King's Landing has failed (TIMEOUT).
+$ PLEDGE STATUS
+- TheVale: ALLIED
+- KingsLanding: FAILED
+- Driftmark: PENDING
+$ LIST PRODUCTS
+--- Trade Ledger ---
+Item                    | Value (Gold) | Weight (Stone)
+--------------------------------------------------------
+Antlered Helm           | 250          | 4.5
+Warhammer of Bronze     | 400          | 8.0
+Stormlands Ale Barrel   | 80           | 10.0
+Ship Timber Plank       | 60           | 15.0
+Salted Fish Barrel      | 55           | 20.0
+Wine Cask               | 120          | 5.0
+Leather Riding Boots    | 90           | 2.0
+Bronze Helm             | 140          | 3.5
+Woolen Blanket          | 30           | 2.5
+Iron Dagger             | 35           | 1.2
+Grain Sack              | 40           | 10.0
+--------------------------------------------------------
+
+Total Entries: 11
+$ EXIT
+The Maester of Dragonstone signs off. The ravens rest.
+
+$montserrat:>
